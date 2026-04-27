@@ -1,19 +1,14 @@
 import math
 import random
 
-# ==========================================
-# 1. PARAMETER ALGORITMA
-# ==========================================
+## 1. PARAMETER ALGORITMA
 ukuran_populasi = 50
 panjang_kromosom = 32
 prob_crossover = 0.8
 prob_mutasi = 0.05
 maksimal_generasi = 100
 
-# ==========================================
-# 2. PROSES ALGORITMA GENETIKA
-# ==========================================
-
+## 2. PROSES ALGORITMA GENETIKA
 # Proses 1: Inisialisasi populasi
 def buat_populasi_awal():
     populasi = []
@@ -111,9 +106,7 @@ def mutasi(kromosom):
                 kromosom[i] = 0
     return kromosom
 
-# ==========================================
-# 3. PROGRAM UTAMA (LOOP EVOLUSI)
-# ==========================================
+## 3. PROGRAM UTAMA (LOOP EVOLUSI)
 populasi = buat_populasi_awal()
 
 # Variabel untuk menyimpan pencapaian terbaik sepanjang masa
@@ -159,9 +152,7 @@ for generasi in range(maksimal_generasi):
     # Gantikan populasi lama dengan yang baru
     populasi = populasi_baru
 
-# ==========================================
-# 4. OUTPUT HASIL
-# ==========================================
+## 4. OUTPUT HASIL
 x1_akhir, x2_akhir = dekode(kromosom_terbaik_global)
 
 print("=== HASIL ALGORITMA GENETIKA ===")
